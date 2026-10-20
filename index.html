@@ -393,6 +393,19 @@
       align-items: center;
       justify-content: center;
     }
+    .service-tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--primary-gold);
+      background: rgba(217, 119, 6, 0.12);
+      border: 1px solid rgba(217, 119, 6, 0.25);
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 8px;
+    }
     .service-card-title {
       font-size: 0.95rem;
       font-weight: 700;
@@ -785,85 +798,85 @@
       <div class="quick-card">
         <div class="quick-card-icon">📱</div>
         <h3>Agendamento Rápido</h3>
-        <p>Mande mensagem direto pro Daniel:<br><strong style="color: var(--primary-gold);">(21) 98251-3772</strong></p>
+        <p>Mande mensagem no WhatsApp:<br><strong style="color: var(--primary-gold); font-size: 0.95rem;">(21) 98251-3772</strong></p>
       </div>
     </div>
   </div>
 
-  <!-- Interactive Combo & Service Builder -->
+  <!-- Vitrine de Serviços & Especialidades -->
   <section id="servicos">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Tabela de Serviços</span>
-        <h3 class="section-title">Monte o seu Atendimento</h3>
-        <p class="section-subtitle">Selecione os serviços que você deseja fazer hoje e envie direto no WhatsApp do Daniel com 1 clique.</p>
+        <span class="section-tag">Vitrine de Especialidades</span>
+        <h3 class="section-title">Nossos Serviços & Estilos</h3>
+        <p class="section-subtitle">Conheça os cortes e procedimentos de alto padrão executados na Planeta Do Corte. Escolha o seu estilo e agende com antecedência.</p>
       </div>
 
       <div class="builder-container">
         <div class="builder-grid">
           <div>
-            <h4 style="font-size: 1.1rem; margin-bottom: 16px; color: var(--text-white);">Clique para Selecionar:</h4>
+            <h4 style="font-size: 1.1rem; margin-bottom: 16px; color: var(--text-white);">Selecione os procedimentos desejados:</h4>
             <div class="service-options-grid">
               
-              <div class="service-card selected" onclick="toggleService('Corte Degradê / Fade', 35, this)">
+              <div class="service-card selected" onclick="toggleService('Corte Degradê / Fade', this)">
+                <span class="service-tag">💈 Mais Pedido</span>
                 <div class="service-card-title">Corte Degradê / Fade</div>
                 <div class="service-card-desc">Degradê na zero, navalhado ou social com acabamento milimétrico na régua.</div>
-                <div class="service-card-price">R$ 35,00</div>
               </div>
 
-              <div class="service-card selected" onclick="toggleService('Barboterapia Completa', 30, this)">
+              <div class="service-card selected" onclick="toggleService('Barboterapia Completa', this)">
+                <span class="service-tag">✂️ Especialidade</span>
                 <div class="service-card-title">Barboterapia Completa</div>
                 <div class="service-card-desc">Alinhamento de barba, toalha quente, hidratação com óleo nobre e pós-barba calmante.</div>
-                <div class="service-card-price">R$ 30,00</div>
               </div>
 
-              <div class="service-card" onclick="toggleService('Sobrancelha na Navalha', 15, this)">
+              <div class="service-card" onclick="toggleService('Sobrancelha na Navalha', this)">
+                <span class="service-tag">✨ Acabamento</span>
                 <div class="service-card-title">Sobrancelha na Navalha</div>
                 <div class="service-card-desc">Limpeza e alinhamento do desenho na navalha com máxima precisão.</div>
-                <div class="service-card-price">R$ 15,00</div>
               </div>
 
-              <div class="service-card" onclick="toggleService('Pigmentação de Barba / Cabelo', 25, this)">
+              <div class="service-card" onclick="toggleService('Pigmentação de Barba / Cabelo', this)">
+                <span class="service-tag">🎨 Destaque</span>
                 <div class="service-card-title">Pigmentação Barba/Cabelo</div>
                 <div class="service-card-desc">Disfarce de falhas com tintura suave de alta fixação para destacar o alinhamento.</div>
-                <div class="service-card-price">R$ 25,00</div>
               </div>
 
-              <div class="service-card" onclick="toggleService('Platinado / Nevou', 80, this)">
+              <div class="service-card" onclick="toggleService('Platinado / Nevou', this)">
+                <span class="service-tag">🔥 Tendência</span>
                 <div class="service-card-title">Platinado / Nevou</div>
                 <div class="service-card-desc">Descoloração global profissional com matização e proteção dos fios.</div>
-                <div class="service-card-price">R$ 80,00</div>
               </div>
 
-              <div class="service-card" onclick="toggleService('Hidratação Capilar Profunda', 25, this)">
+              <div class="service-card" onclick="toggleService('Hidratação Capilar Profunda', this)">
+                <span class="service-tag">💆 Tratamento VIP</span>
                 <div class="service-card-title">Hidratação Capilar</div>
                 <div class="service-card-desc">Tratamento repositor de massa e brilho para cabelos ressecados.</div>
-                <div class="service-card-price">R$ 25,00</div>
               </div>
 
             </div>
           </div>
 
-          <!-- Summary Box -->
+          <!-- Summary Box (Vitrine) -->
           <div class="summary-box">
             <div>
-              <h4>Resumo do Agendamento</h4>
+              <h4>Serviços Selecionados</h4>
               <ul class="selected-list" id="selectedServicesList">
-                <li class="selected-item"><span>Corte Degradê / Fade</span><span>R$ 35</span></li>
-                <li class="selected-item"><span>Barboterapia Completa</span><span>R$ 30</span></li>
+                <li class="selected-item"><span>Corte Degradê / Fade</span></li>
+                <li class="selected-item"><span>Barboterapia Completa</span></li>
               </ul>
             </div>
 
             <div>
-              <div class="summary-total">
-                <span>Total Estimado:</span>
-                <strong id="totalPrice">R$ 65,00</strong>
+              <div class="summary-total" style="background: rgba(217, 119, 6, 0.08); border-color: rgba(217, 119, 6, 0.25);">
+                <span>Atendimento VIP</span>
+                <strong style="font-size: 1rem; color: #FBBF24;">Hora Marcada</strong>
               </div>
               <button class="btn-submit-order" onclick="sendWhatsAppSchedule()">
-                <span>📲 Agendar no WhatsApp com Daniel</span>
+                <span>📲 Agendar no WhatsApp</span>
               </button>
               <p style="font-size: 0.72rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
-                Sem pagamento prévio no site. Você paga direto na barbearia!
+                Sem fila de espera! Agende seu horário com antecedência.
               </p>
             </div>
           </div>
@@ -1012,17 +1025,17 @@
 
   <!-- JavaScript Combo Calculator -->
   <script>
-    const selectedServices = {
-      'Corte Degradê / Fade': 35,
-      'Barboterapia Completa': 30
+    let selectedServices = {
+      'Corte Degradê / Fade': true,
+      'Barboterapia Completa': true
     };
 
-    function toggleService(name, price, element) {
+    function toggleService(name, element) {
       if (selectedServices[name]) {
         delete selectedServices[name];
         element.classList.remove('selected');
       } else {
-        selectedServices[name] = price;
+        selectedServices[name] = true;
         element.classList.add('selected');
       }
       renderSummary();
@@ -1030,39 +1043,28 @@
 
     function renderSummary() {
       const listEl = document.getElementById('selectedServicesList');
-      const totalEl = document.getElementById('totalPrice');
       listEl.innerHTML = '';
 
-      let total = 0;
       const keys = Object.keys(selectedServices);
 
       if (keys.length === 0) {
-        listEl.innerHTML = '<li class="selected-item" style="color: var(--text-muted);">Nenhum serviço selecionado</li>';
-        totalEl.textContent = 'R$ 0,00';
+        listEl.innerHTML = '<li class="selected-item" style="color: var(--text-muted);">Nenhum serviço selecionado. Toque nos cards ao lado!</li>';
         return;
       }
 
       keys.forEach(service => {
-        const price = selectedServices[service];
-        total += price;
         const li = document.createElement('li');
         li.className = 'selected-item';
-        li.innerHTML = `<span>${service}</span><span>R$ ${price.toFixed(2).replace('.', ',')}</span>`;
+        li.innerHTML = `<span>✂️ ${service}</span><span style="color: var(--primary-gold);">✓</span>`;
         listEl.appendChild(li);
       });
-
-      totalEl.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
     }
 
     function sendWhatsAppSchedule() {
       const keys = Object.keys(selectedServices);
-      if (keys.length === 0) {
-        alert('Por favor, selecione pelo menos um serviço para agendar!');
-        return;
-      }
+      let servicesText = keys.length > 0 ? keys.join(' + ') : 'Corte de Cabelo / Barba';
 
-      const servicesText = keys.join(' + ');
-      const msg = `Fala Daniel! Vi o site da Planeta do Corte e montei meu agendamento:\n\n✂️ Serviços: ${servicesText}\n💰 Total Estimado: ${document.getElementById('totalPrice').textContent}\n\nQuais horários você tem disponíveis hoje?`;
+      const msg = `Fala Daniel! Vi a vitrine no site da Planeta do Corte e queria agendar um horário:\n\n✂️ Serviços desejados: ${servicesText}\n\nQuais horários você tem disponíveis hoje ou essa semana?`;
       const encoded = encodeURIComponent(msg);
       window.open(`https://wa.me/5521982513772?text=${encoded}`, '_blank');
     }
